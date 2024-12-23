@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: None
+// SPDX-License-Identifier: Unlicense
+
 #include "simple_fft.h"
 
 #include <complex.h>

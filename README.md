@@ -1,7 +1,7 @@
 Simple FFT library
 ==================
 
-Just another small and simple FFT implementation, provides both FFT of complex and real input data. It was written with focus on embedded application (for audio processing), but certainly can be used in any other cases.
+Yet another small and simple FFT implementation, provides both FFT of complex and real input data. It was written with focus on embedded application (for audio processing), but certainly can be used in any other cases.
 
 Key features (attractive for embedded):
 
@@ -62,3 +62,14 @@ Usage
 There is no build/project file provided, just build it as part of the project. API usage is straightforward, see the comments in header for details.
 
 The library is "pure C", there are no C++ guards in the header file, so to use it in C++ environment just wrap include statement with `extern "C"`.
+
+```c++
+extern "C" {
+#include "simple_fft.h"
+}
+```
+
+License
+-------
+
+Public domain, I don't claim any copyright.

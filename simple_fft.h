@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: None
+// SPDX-License-Identifier: Unlicense
+
 #ifndef __SIMPLE_FFT_H__
 #define __SIMPLE_FFT_H__
 
@@ -13,7 +16,7 @@ typedef struct {
 
 // initializes all the fields in configuration struct
 // there is no extra initialization logic behind it, so
-// it is not strictly necesary call this function,
+// it is not strictly necesary to call this function,
 // configuration struct can be initialized manually with
 // the static data previously returned by this function
 // cfg - simple_fft_cfg struct to fill
@@ -26,7 +29,7 @@ void fft_init(simple_fft_cfg* cfg, float* tw, unsigned int N);
 // does in-place FFT transform
 // output format is the same as in KISS FFT C++
 // cfg - FFT configuration (see above)
-// data is array of (re,im) pairs
+// data is array of (re,im) pairs, N in total
 void fft_cplx(const simple_fft_cfg* cfg, float* data);
 
 // does in-place FFT transform
