@@ -6,7 +6,7 @@
 
 // FFT configuration / service data struct
 // this struct was intentionally made a part of interface
-// to allow compile time initialization with static data
+// to allow compile-time initialization with static data
 typedef struct {
   unsigned int n;     // FFTs count, should be power of 2
   const float* tw;    // twiddle factors, 2n (n *pairs*)
@@ -16,7 +16,7 @@ typedef struct {
 
 // initializes all the fields in configuration struct
 // there is no extra initialization logic behind it, so
-// it is not strictly necesary to call this function,
+// it is not strictly necessary to call this function,
 // configuration struct can be initialized manually with
 // the static data previously returned by this function
 // cfg - simple_fft_cfg struct to fill

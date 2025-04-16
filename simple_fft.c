@@ -47,8 +47,8 @@ static void compute(float complex* data, const float* tw, const unsigned int N)
 {
   for (unsigned int step = 1; step < N; step <<= 1) {
     const unsigned int jump = step << 1;
-    float twiddle_re = 1.0;
-    float twiddle_im = 0.0;
+    float twiddle_re = 1.f;
+    float twiddle_im = 0.f;
     for (unsigned int group = 0; group < step; group++) {
       for (unsigned int pair = group; pair < N; pair += jump) {
         const unsigned int match = pair + step;
@@ -82,11 +82,11 @@ void fft_cplx(const simple_fft_cfg* cfg, float* data)
 static void postprocess(const simple_fft_cfg* cfg, float complex* dst)
 {
   const unsigned int N = cfg->n;
-  // post processing for k = 0 and k = N
+  // post-processing for k = 0 and k = N
   dst[0] = (crealf(dst[0]) + cimagf(dst[0])) +
            (crealf(dst[0]) - cimagf(dst[0]))*I;
 
-  // post processing for all the other k = 1, 2, ..., N-1
+  // post-processing for all the other k = 1, 2, ..., N-1
   const float complex* twiddles = (float complex*)cfg->tw;
   const float complex twiddle_mul = cfg->tw_mul_re + cfg->tw_mul_im*I;
   for (unsigned int k = 1; 2*k < N; ++k ) {
