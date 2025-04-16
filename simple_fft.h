@@ -16,7 +16,7 @@ typedef struct {
 
 // initializes all the fields in configuration struct
 // there is no extra initialization logic behind it, so
-// it is not strictly necesary to call this function,
+// it is not strictly necessary to call this function,
 // configuration struct can be initialized manually with
 // the static data previously returned by this function
 // cfg - simple_fft_cfg struct to fill
