@@ -42,7 +42,7 @@ static void rearrange(float complex* data, const unsigned int N)
 }
 
 // does FFT, data must be processed by rearrange() before calling this
-// code is based on https://github.com/lloydroc/arduino_fft
+// the code is based on https://github.com/lloydroc/arduino_fft
 static void compute(float complex* data, const float* tw, const unsigned int N)
 {
   for (unsigned int step = 1; step < N; step <<= 1) {
@@ -60,7 +60,7 @@ static void compute(float complex* data, const float* tw, const unsigned int N)
       }
 
       // we need the factors below for the next iteration
-      // if we don't iterate then don't compute
+      // if we don't iterate, then don't compute
       if(group+1 == step)
         continue;
 
@@ -77,7 +77,7 @@ void fft_cplx(const simple_fft_cfg* cfg, float* data)
   compute((float complex*)data, cfg->tw, cfg->n);
 }
 
-// code is based on KISS FFT C++ implementation of real data transform
+// the code is based on KISS FFT C++ implementation of real data transform
 // https://github.com/mborgerding/kissfft/blob/master/kissfft.hh
 static void postprocess(const simple_fft_cfg* cfg, float complex* dst)
 {

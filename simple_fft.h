@@ -5,7 +5,7 @@
 #define SIMPLE_FFT_H
 
 // FFT configuration / service data struct
-// this struct was intentionally made a part of interface
+// this struct was intentionally made a part of the interface
 // to allow compile-time initialization with static data
 typedef struct {
   unsigned int n;     // FFTs count, should be power of 2
@@ -29,13 +29,13 @@ void fft_init(simple_fft_cfg* cfg, float* tw, unsigned int N);
 // does in-place FFT transform
 // output format is the same as in KISS FFT C++
 // cfg - FFT configuration (see above)
-// data is array of (re,im) pairs, N in total
+// data is an array of (re,im) pairs, N in total
 void fft_cplx(const simple_fft_cfg* cfg, float* data);
 
 // does in-place FFT transform
 // output format is the same as in KISS FFT C++
 // cfg - FFT configuration (see above)
-// data is array of real values, 2*N in total
+// data is an array of real values, 2*N in total
 void fft_real(const simple_fft_cfg* cfg, float* data);
 
 #endif  // SIMPLE_FFT_H
