@@ -44,7 +44,7 @@ Performance is comparable with FFTW implementation, at least for the cases of 51
 What's behind
 -------------
 
-This library doesn't introduce anything new, it is even not an "just implementation" of some FFT algorithm, this is actually mix of some parts of 2 existing libraries, just with obvious optimizations:
+This library doesn't introduce anything new, it is not even an "just implementation" of some FFT algorithm, this is actually mix of some parts of 2 existing libraries, just with obvious optimizations:
 
 - [Arduino FFT](https://github.com/lloydroc/arduino_fft)
 
@@ -52,7 +52,7 @@ This library doesn't introduce anything new, it is even not an "just implementat
 
 - [KISS FFT](https://github.com/mborgerding/kissfft)
 
-  the way how FFT is done on real data input is copied from this library C++ implementation, just slightly improved, just to avoid heavy trigonometric functions calls
+  the way how FFT is done on real data input is copied from its C++ implementation, just converted to C and slightly improved to avoid heavy trigonometric functions calls
 
 Any requirements, implications, or limitations of algorithms in the libraries above are applicable to this library.
 
